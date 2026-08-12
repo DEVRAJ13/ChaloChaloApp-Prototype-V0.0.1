@@ -482,7 +482,7 @@ resource "oci_core_instance" "chalochalo" {
   # AVAILABILITY DOMAIN
   # -------------------------------------------------------
 
-  availability_domain = availability_domain = var.a1_availability_domain
+  availability_domain = var.a1_availability_domain
 
 
   # -------------------------------------------------------

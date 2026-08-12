@@ -1,64 +1,143 @@
-# IDE
+# =========================================================
+# IDE / Editor
+# =========================================================
 .idea/
 .vscode/
 *.iml
 
+# =========================================================
 # macOS
+# =========================================================
 .DS_Store
 
-# Environment / secrets
+# =========================================================
+# Environment / Secrets
+# =========================================================
 .env
 .env.*
 !.env.example
 
-# Python
-__pycache__/
-*.py[cod]
-.venv/
-venv/
-.pytest_cache/
-.mypy_cache/
-
-# React / Node
+# =========================================================
+# Node.js / React / Vite
+# =========================================================
 node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# React / Vite build output
 dist/
 build/
 .vite/
 
+# Coverage
+coverage/
+
+# Cache
+.cache/
+.parcel-cache/
+.eslintcache
+
+# TypeScript
+*.tsbuildinfo
+
+# =========================================================
+# Python
+# =========================================================
+__pycache__/
+*.py[cod]
+*.pyo
+
+.venv/
+venv/
+env/
+
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# =========================================================
 # Terraform
+# =========================================================
 .terraform/
-.terraform/
+
 *.tfstate
 *.tfstate.*
 *.tfplan
 tfplan
+
+# Terraform variable files may contain secrets
 *.tfvars
 *.tfvars.json
-*.pem
-*.key
-.env
-.env.*
 
+# Terraform lock file SHOULD NOT be ignored
+# Keep this committed:
+# .terraform.lock.hcl
 
-# Docker
-docker-data/
-
-# Logs
-*.log
-
-# Credentials
+# Terraform sensitive credentials
 *.pem
 *.key
 *.p12
-*.jksinfrastructure/terraform/tfplan
+*.jks
 
-# Terraform generated/sensitive files
-.terraform/
-*.tfstate
-*.tfstate.*
-*.tfplan
-tfplan
-*.tfvars
-*.tfvars.json
+# =========================================================
+# Infrastructure
+# =========================================================
+infrastructure/terraform/.terraform/
+infrastructure/terraform/*.tfstate
+infrastructure/terraform/*.tfstate.*
+infrastructure/terraform/*.tfplan
+infrastructure/terraform/tfplan
+infrastructure/terraform/*.tfvars
+infrastructure/terraform/*.tfvars.json
+
+# =========================================================
+# Docker
+# =========================================================
+docker-data/
+docker-volumes/
+
+# =========================================================
+# Logs
+# =========================================================
+*.log
+logs/
+
+# =========================================================
+# Credentials / Certificates
+# =========================================================
 *.pem
 *.key
+*.p12
+*.pfx
+*.jks
+*.crt
+
+# =========================================================
+# OS temporary files
+# =========================================================
+*.tmp
+*.temp
+*.swp
+*.swo
+*~
+
+# =========================================================
+# Database / Local development
+# =========================================================
+*.sqlite
+*.sqlite3
+*.db
+
+# =========================================================
+# Testing
+# =========================================================
+.pytest_cache/
+.coverage
+htmlcov/
+
+# =========================================================
+# Generated files
+# =========================================================
+*.generated.*
