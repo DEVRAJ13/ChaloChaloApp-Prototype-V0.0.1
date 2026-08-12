@@ -1,0 +1,64 @@
+# IDE
+.idea/
+.vscode/
+*.iml
+
+# macOS
+.DS_Store
+
+# Environment / secrets
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+
+# React / Node
+node_modules/
+dist/
+build/
+.vite/
+
+# Terraform
+.terraform/
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+*.tfvars
+*.tfvars.json
+*.pem
+*.key
+.env
+.env.*
+
+
+# Docker
+docker-data/
+
+# Logs
+*.log
+
+# Credentials
+*.pem
+*.key
+*.p12
+*.jksinfrastructure/terraform/tfplan
+
+# Terraform generated/sensitive files
+.terraform/
+*.tfstate
+*.tfstate.*
+*.tfplan
+tfplan
+*.tfvars
+*.tfvars.json
+*.pem
+*.key
